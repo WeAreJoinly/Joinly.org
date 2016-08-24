@@ -1,0 +1,79 @@
+input{
+  background-color: #fcfcfc !important;
+  padding-left: 10px !important;
+}
+input:focus{
+  border-bottom: 1px solid #3d92de !important;
+  box-shadow: 0 1px 0 0 #3d92de !important;
+}
+.textAlignCenter{
+  text-align: center;
+}
+.maxWidth500{
+  max-width: 500px;
+}
+.maxWidth350{
+  max-width: 350px;
+}
+.maxWidth120{
+  max-width: 120px;
+}
+.loginPageLogo{
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+}
+.maxWidth200{
+  max-width: 200px;
+}
+.fullWidth{
+  width: 100%;
+}
+.loginButton{
+  background-color: rgb(61, 146, 222);
+}
+.loginButton:hover{
+  background-color: rgb(48, 134, 210);
+}
+
+.myOrDeivider{
+  position: relative;
+  color: #9e9e9e;
+}
+.myOrDeivider hr{
+  width: 40%;
+  position: absolute;
+  top: 0px;
+}
+.myOrDeivider hr.left{
+  left: 0px;
+}
+.myOrDeivider hr.right{
+  right: 0px;
+}
+
+td.mySocialLogin{
+  padding: 5px 5px;
+}
+.socialLogin h5{
+  font-size: 18px;
+}
+.myGoogleLogin{
+  color: #d63121;
+  cursor: pointer;
+}
+.myFacebookLogin{
+  color: #1b5db4;
+  cursor: pointer;
+}
+.myGoogleLogin:hover{
+  color: #b1281b;
+}
+.myFacebookLogin:hover{
+  color: #144f9d;
+}
+
+.signupPage input{
+  margin-bottom: -10px;
+}

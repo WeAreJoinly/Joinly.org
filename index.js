@@ -1,16 +1,18 @@
 var express = require('express');
 var app = express();
+var morgan = require('morgan');
 var path = require('path');
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var firebase = require('firebase');
 var request = require('request');
+var logger = require('logger-request');
 
 var port = process.env.PORT || 8080;
 server.listen(port);
 
-// Initialize Firebase
-//Key id = 2dfbf1133b79ecaa9be5a901d7dac9457216805f
+//TODO: Initialize Firebase
+/*
 var config = {
   serviceAccount: "path/to/serviceAccountCredentials.json",
   authDomain: "joinapp-28d70.firebaseapp.com",
@@ -19,15 +21,23 @@ var config = {
 };
 firebase.initializeApp(config);
 var database = firebase.database();
+*/
 
-//Process GET requests
+//Logging tools
+/*
+app.use(morgan('dev'));
+app.use(logger({
+  filename: 'logger.log',
+}));
+*/
+
 app.use("/", express.static(path.join(__dirname, 'site')));
+
+app.use("/manage", express.static(path.join(__dirname, 'manage')));
 
 app.get('/apply', function(req, res) {
   res.redirect(301, 'https://docs.google.com/forms/d/e/1FAIpQLSc60UXvlEPpw-QmruLwiCTDZDsnKph1eYTh_D9P3TGDSLdbeQ/viewform');
 });
-
-app.use("/manage", express.static(path.join(__dirname, 'manage')));
 
 app.get('/timePerCustomerInQueue', function(req, res){
   var queueId = req.query.queue;

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="joinly">
 	<head>
-		<title>Joinly - Manage Queue</title>
+		<title>Joinly</title>
 
 		<meta name="keywords" content="joinly, queue, startup, save, time, dashboard, manage, business">
 		<meta name="description" content="We'll remove the queue from your life. Sign up for Beta access now and be first to save time and live life without queue.">
@@ -9,12 +9,53 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-
 		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/main.js"></script>
+
+		<script src="assets/js/materialize.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="assets/css/materialize.min.css" media="screen" charset="utf-8">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" charset="utf-8">
+
+		<link rel="stylesheet" href="assets/css/main.css" media="screen" charset="utf-8"/>
+
+		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDqajL716vFfVVEDtcECPlt16MGP5zW4SY",
+		    authDomain: "joinly-858e8.firebaseapp.com",
+		    databaseURL: "https://joinly-858e8.firebaseio.com",
+		    storageBucket: "joinly-858e8.appspot.com",
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
 	</head>
-	<body>
-		<h1>Hello</h1>
-	</body>
+  <body>
+    <div ng-app="app">
+  		<ng-view></ng-view>
+	  </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

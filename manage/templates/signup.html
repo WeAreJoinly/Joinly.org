@@ -1,0 +1,62 @@
+<div class="container maxWidth500 signupPage">
+	<div class="row textAlignCenter">
+		<img src="assets/images/joinly-logo.png" class="maxWidth120" alt="Joinly" />
+	</div>
+	<div class="row">
+		<div class="col s6"><input type="text" ng-model="user.businessID" placeholder="Business ID"></div>
+		<div class="col s6"><input type="text" ng-model="user.repName" placeholder="Representatieve's name"></div>
+	</div>
+	<div class="row">
+		<div class="col s6"><input type="text" ng-model="user.coName" placeholder="Company's name"></div>
+		<div class="col s6"><input type="text" ng-model="user.coType" placeholder="Company's type"></div>
+	</div>
+	<div class="row">
+		<div class="col s6"><input type="email" ng-model="user.email" placeholder="Email"></div>
+		<div class="col s6"><input type="password" ng-model="user.password" placeholder="Password"></div>
+	</div>
+	<div class="row">
+		<div class="col s12"><h6>GPS location: Latitude: 60.168757 | Longitude: 24.942503 </h6></div>
+	</div>
+	<div class="row">
+		<div class="col s6"><a class="waves-effect waves-light btn fullWidth loginButton" ng-click="location.current()">Use own location</a></div>
+		<div class="col s6"><a class="waves-effect waves-light btn fullWidth loginButton" ng-click="location.choose()">Choose location</a></div>
+	</div>
+	<div class="row">
+		<div class="col s12"><input type="text" ng-model="user.address" placeholder="Address"></div>
+	</div>
+	<div class="row">
+		<div class="col s4"><input type="text" ng-model="user.country" placeholder="Country"></div>
+		<div class="col s4"><input type="text" ng-model="user.city" placeholder="City"></div>
+		<div class="col s4"><input type="text" ng-model="user.zip" placeholder="ZIP-code"></div>
+	</div>
+	<div class="row">
+		<div class="col s7"><input type="text" ng-model="user.customersDaily" placeholder="Estimated amount of customers daily"></div>
+		<div class="col s5"><input type="text" ng-model="user.category" placeholder="Place category"></div>
+	</div>
+	<div class="row">
+		<div class="col s8">
+			<input type="text" ng-model="user.paymentMathod" placeholder="Choose Payment Method" class="dropdown-button" readonly>
+		</div>
+		<div class="col s4">
+			<button data-activates='paymentMethodDropdown' class='paymentMethodDropdown waves-effect waves-light btn fullWidth'>Choose</button>
+			<ul id='paymentMethodDropdown' class='dropdown-content'>
+				<li><a ng-click="paymentMethod('card')">Credit Card</a></li>
+				<li class="divider"></li>
+				<li><a ng-click="paymentMethod('paypal')">PayPal</a></li>
+				<li class="divider"></li>
+				<li><a ng-click="paymentMethod('ebilling')">Email billing</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12"><input type="text" ng-model="user.cardNumber" placeholder="Card Number"></div>
+	</div>
+	<div class="row">
+		<div class="col s8"><input type="date" ng-model="user.expirationDate" placeholder="Expiration Date"></div>
+		<div class="col s4"><input type="date" ng-model="user.securityCode" placeholder="Security Code"></div>
+	</div>
+	<div class="row textAlignCenter socialLogin">
+		<h6>Already have an account?</h6>
+		<a ng-href="./"><h5>Log in</h5></a>
+	</div>
+</div>

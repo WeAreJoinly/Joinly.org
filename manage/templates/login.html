@@ -1,0 +1,37 @@
+<div class="container maxWidth350">
+  <div class="row textAlignCenter">
+    <img src="assets/images/joinly-logo.png" class="loginPageLogo" alt="Joinly" />
+  </div>
+  <div class="row">
+    <input type="email" ng-model="user.email" placeholder="Email">
+    <input type="password" ng-model="user.password" placeholder="Password">
+    <a class="waves-effect waves-light btn fullWidth loginButton" ng-click="login()">Log in</a>
+  </div>
+  <div class="row myOrDeivider">
+    <hr class="left">
+    <h6 class="textAlignCenter">Or</h6>
+    <hr class="right">
+  </div>
+  <div class="row textAlignCenter socialLogin">
+    <table align='center' class="maxWidth200">
+      <tr class="myFacebookLogin">
+        <td class="mySocialLogin">
+          <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+        </td>
+        <td class="mySocialLogin">
+          <h6 class="valign">Login with Facebook</h6>
+        </td>
+      </tr>
+      <tr class="myGoogleLogin">
+        <td class="mySocialLogin">
+          <i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
+        </td>
+        <td class="mySocialLogin">
+          <h6 class="valign">Login with Google+</h6>
+        </td>
+      </tr>
+    </table>
+    <h6>New to Joinly?</h6>
+    <a ng-href="#/signup"><h5>Sign Up</h5></a>
+  </div>
+</div>
